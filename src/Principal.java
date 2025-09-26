@@ -19,6 +19,6 @@ public class Principal {
                 "\nIncluído no plano: " + meuFilme.incluidoNoPlano +
                 "\nTotal de avaliações: " + meuFilme.getTotalDeAvaliacao() +
                 "\nMédia de avaliações: " + meuFilme.mediaAvalicao();
-        JOptionPane.showMessageDialog(null, mensagem);
+       JOptionPane.showMessageDialog(null, mensagem, "Ficha Técnica do Filme", JOptionPane.INFORMATION_MESSAGE);
     }
 }
