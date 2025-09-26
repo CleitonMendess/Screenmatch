@@ -13,12 +13,11 @@ public class Principal {
         meuFilme.avalia(5);
         meuFilme.avalia(10);
 
-        String mensagem = "Nome do br.com.alura.screenmatch.modelos.Filme: " + meuFilme.nome +
-                "\nAno de lançamento: " + meuFilme.anoDeLancamento +
-                "\nTempo: " + meuFilme.duracaoEmMinutos +
-                "\nIncluído no plano: " + meuFilme.incluidoNoPlano +
-                "\nTotal de avaliações: " + meuFilme.getTotalDeAvaliacao() +
-                "\nMédia de avaliações: " + meuFilme.mediaAvalicao();
+        //deixando menor o mesmo codigo
+        String mensagem = "Nome: " + meuFilme.nome + "\n";
+        mensagem += "Ano de lançamento: " + meuFilme.anoDeLancamento + "\n";
+        mensagem += "Duração: " + meuFilme.getDuracaoEmMinutos() + " minutos\n";
+        
        JOptionPane.showMessageDialog(null, mensagem, "Ficha Técnica do Filme", JOptionPane.INFORMATION_MESSAGE);
     }
 }
