@@ -1,46 +1,59 @@
-package br.com.alura.screenmatch.modelos;
-
-import javax.swing.JOptionPane;
+package br.com.alura.screenmatch;
 
 public class Filme {
-    private String nome;
-   private int anoDeLancamento, duracaoEmMinutos;
+    public String nome;
+    public int anoDeLancamento;
     boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
-    private int totalDeAvaliacao;
-   public int getTotalDeAvaliacao(){
-        return totalDeAvaliacao;
+    private int totalDeAvaliacoes;
+    private int duracaoEmMinutos;
+    
+
+    public int getTotalDeAvaliacoes() {
+        return totalDeAvaliacoes;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome(String n) {
+     this.nome = nome;
+     
     }
+
+
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+        
+    }
+
+
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
+
+
 
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
-    public void setAnoDeLancamento(int anoDeLancamento) {
-        this.anoDeLancamento = anoDeLancamento;
+
+
+    public void exibeFichaTecnica() {
+        System.out.println("Nome do filme: " + nome);
+        System.out.println("Ano de lançamento: " + anoDeLancamento);
     }
 
-    public void exibiFichaTecnica() {
-        String mensagem = "Nome do br.com.alura.screenmatch.modelos.Filme: " + nome +
-                "\nAno de lançamento: " + anoDeLancamento +
-                "\nTempo: " + duracaoEmMinutos +
-                "\nIncluído no plano: " + incluidoNoPlano +
-                "\nTotal de avaliações: " + totalDeAvaliacao +
-                "\nMédia de avaliações: " + mediaAvalicao();
-        JOptionPane.showMessageDialog(null, mensagem);
-
-
-    }
     public void avalia(double nota) {
         somaDasAvaliacoes += nota;
-        totalDeAvaliacao++;
+        totalDeAvaliacoes++;
     }
 
-    public double mediaAvalicao(){
-        return  somaDasAvaliacoes /  totalDeAvaliacao;
+    public double pegaMedia() {
+        return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 }
