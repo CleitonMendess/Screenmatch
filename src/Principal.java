@@ -1,3 +1,4 @@
+// talvez tenha que alterar a linha no seu IDE pra .modelos no final
 import br.com.alura.screenmatch.modelos.Filme;
 import javax.swing.JOptionPane;
 
