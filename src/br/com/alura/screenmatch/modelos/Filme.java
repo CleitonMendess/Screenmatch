@@ -14,7 +14,7 @@ public class Filme {
     }
 
     public void setNome(String n) {
-     n = nome;
+     this.nome = n;
      
     }
 
