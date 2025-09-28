@@ -1,10 +1,10 @@
-package br.com.alura.screenmatch;
+package br.com.alura.screenmatch.modelos;
 
 public class Filme {
     public String nome;
     public int anoDeLancamento;
     boolean incluidoNoPlano;
-    private double somaDasAvaliacoes;
+    private int somaDasAvaliacoes;
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
     
@@ -14,7 +14,7 @@ public class Filme {
     }
 
     public void setNome(String n) {
-     this.nome = nome;
+     n = nome;
      
     }
 
